@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Limits in Precalculus</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #007acc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #007acc;
+        }
+
+        footer {
+            background-color: #007acc;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #graph-container {
+            width: 100%;
+            height: 400px;
+        }
+
+        .quiz-question {
+            margin: 20px 0;
+        }
+
+        .quiz-question p {
+            font-weight: bold;
+        }
+
+        .quiz-question ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .quiz-question ul li {
+            margin: 10px 0;
+        }
+
+        .quiz-question ul li button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007acc;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .quiz-question ul li button:hover {
+            background-color: #005fa3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Understanding Limits in Precalculus</h1>
+        <nav>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#definition">What Are Limits?</a></li>
+                <li><a href="#applications">Real-World Applications</a></li>
+                <li><a href="#examples">Interactive Examples</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#references">References</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="introduction">
+        <h2>Introduction</h2>
+        <p>Welcome to our interactive exploration of limits in precalculus! Limits are a fundamental concept in mathematics that help us understand the behavior of functions as they approach specific points. Whether you're analyzing the motion of objects or optimizing economic models, limits play a crucial role in various fields.</p>
+        <img src="https://media.istockphoto.com/id/543183018/photo/sunrise-on-mount-kanchenjugha-at-dawn-sikkim.jpg?s=612x612&w=0&k=20&c=ONnlaZ9ny-HD9P3li-5t0tzpm0dHdahYRdmN_WxrMsc=" alt="Scenic view of a mountain range at sunrise">
+    </section>
+
+  <section id="definition">
+        <h2>What Are Limits?</h2>
+        <p>In mathematics, a limit is the value that a function (or sequence) approaches as the input (or index) approaches some value. Limits are essential to calculus and mathematical analysis and are used to define continuity, derivatives, and integrals.</p>
+        <h3>Understanding Limits</h3>
+        <p>To understand limits, consider the function f(x) = (x^2 - 1) / (x - 1). If you substitute x = 1 directly into the function, you'll get a 0/0 form, which is undefined. However, if you simplify the function, you get f(x) = x + 1. Now, as x approaches 1, f(x) approaches 2. Therefore, we say that the limit of f(x) as x approaches 1 is 2.</p>
+        <h3>Evaluating Limits</h3>
+        <p>Limits can be evaluated using various methods:</p>
+        <ul>
+            <li><strong>Direct Substitution:</strong> If f(x) is continuous at x = a, then the limit as x approaches a is simply f(a).</li>
+            <li><strong>Factoring:</strong> Factor the expression and simplify it to find the limit.</li>
+            <li><strong>Rationalizing:</strong> Multiply by the conjugate if the limit involves a square root.</li>
+            <li><strong>L'Hôpital's Rule:</strong> If you get an indeterminate form like 0/0 or ∞/∞, you can differentiate the numerator and denominator and then take the limit.</li>
+        </ul>
+        <h3>Example:</h3>
+        <p>Find the limit of (x^2 - 1) / (x - 1) as x approaches 1.</p>
+        <p>Solution: Simplify the expression to get f(x) = x + 1. Now, as x approaches 1, f(x) approaches 2. So, the limit is 2.</p>
+    </section>
+
+    <section id="applications">
+        <h2>Real-World Applications</h2>
+        <p>Limits are not just theoretical concepts; they have practical applications in many areas. For example, in physics, limits help calculate instantaneous velocity and acceleration. In engineering, they are used to determine the stress and strain on materials. Economists use limits to model cost functions and predict market trends.</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxJPTRCBOPvCkGvoztjr6YsdNhrfK19WXwQQ&s" alt="Infographic showing real-world scenarios where limits are applied">
+    </section>
+
+    <section id="examples">
+        <h2>Interactive Examples</h2>
+        <p>Let's dive into some interactive examples to see how limits work in practice. Use the tool below to input different functions and observe how they behave as they approach specific points. Notice how the graph changes and what it reveals about the function's behavior.</p>
+        <div id="graph-container">
+            <canvas id="graph"></canvas>
+        </div>
+    </section>
+
+    <section id="quiz">
+        <h2>Quiz</h2>
+        <p>Test your knowledge with our interactive quiz! Answer the following questions to see how well you understand the concept of limits. Each question is designed to reinforce your learning and help you apply what you've learned.</p>
+        <div id="quiz-container">
+            <!-- Question 1 -->
+            <div class="quiz-question">
+                <p>What is the limit of f(x) as x approaches 2 if f(x) = x²?</p>
+                <ul>
+                    <li><button onclick="checkAnswer(this, true)">4</button></li>
+                    <li><button onclick="checkAnswer(this, false)">2</button></li>
+                    <li><button onclick="checkAnswer(this, false)">0</button></li>
+                    <li><button onclick="checkAnswer(this, false)">Infinity</button></li>
+                </ul>
+            </div>
+             <!-- Question 2 -->
+            <div class="quiz-question">
+                <p>What is the limit of f(x) as x approaches 5 if f(x) = (x²-25)/(x+5)?</p>
+                <ul>
+                    <li><button onclick="checkAnswer(this, false)">5</button></li>
+                    <li><button onclick="checkAnswer(this, false)">Infinity</button></li>
+                    <li><button onclick="checkAnswer(this, true)">10</button></li>
+                    <li><button onclick="checkAnswer(this, false)">DNE</button></li>
+                </ul>
+            </div>
+             <!-- Question 3 -->
+            <div class="quiz-question">
+                <p>What is the limit of f(x) as x approaches 2 if f(x) = (x²-4)/(4x)?</p>
+                <ul>
+                    <li><button onclick="checkAnswer(this, false)">2</button></li>
+                    <li><button onclick="checkAnswer(this, false)">Infinity</button></li>
+                    <li><button onclick="checkAnswer(this, false)">1</button></li>
+                    <li><button onclick="checkAnswer(this, true)">0</button></li>
+                </ul>
+            </div>
+
+            <!-- More questions can be added similarly -->
+        </div>
+    </section>
+
+    <section id="references">
+        <h2>References</h2>
+       
+        <ul>
+            <li><a href="https://www.khanacademy.org/math/calculus-1/cs1-limits-and-continuity">Khan Academy: Limits and Continuity</a></li>
+            <li><a href="https://www.mathsisfun.com/calculus/limits.html">Math is Fun: Limits</a></li>
+            <li><a href="https://www.youtube.com/watch?v=7K1sB05pE0A">YouTube: Understanding Limits (Educational Video)</a></li>
+        </ul>
+    </section>
+
+    <script>
+        const ctx = document.getElementById('graph').getContext('2d');
+        const graph = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [], // X-axis labels will be dynamically added
+                datasets: [{
+                    label: 'f(x)',
+                    data: [], // Data points will be dynamically added
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 2,
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        type: 'linear',
+                        position: 'bottom'
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Function to update the graph with new data
+        function updateGraph(func, range) {
+            const data = [];
+            const labels = [];
+            for (let x = range[0]; x <= range[1]; x += 0.1) {
+                data.push(func(x));
+                labels.push(x);
+            }
+            graph.data.labels = labels;
+            graph.data.datasets[0].data = data;
+            graph.update();
+        }
+
+        // Example function and range to display
+        updateGraph(x => x * x, [-10, 10]);
+
+        function checkAnswer(button, isCorrect) {
+            if (isCorrect) {
+                button.style.backgroundColor = 'green';
+                alert('Correct!');
+            } else {
+                button.style.backgroundColor = 'red';
+                alert('Incorrect. Try again!');
+            }
+        }
+    </script>
+</body>
+</html>
